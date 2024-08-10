@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -21,6 +22,7 @@ public class Main {
         double power = Math.pow((1+r), n);
 
         double mortgage =principle*r*power/(power-1);
-        System.out.print("Mortgage: " +mortgage);
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.print("Mortgage: " +mortgageFormatted);
     }
     }
